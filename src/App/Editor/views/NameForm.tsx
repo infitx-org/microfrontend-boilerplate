@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import * as actions from '../actions';
 import { State } from 'store/types';
+import * as actions from '../actions';
 
 const NameForm: FC<unknown> = () => {
   const dispatch = useDispatch();

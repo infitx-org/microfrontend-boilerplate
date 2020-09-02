@@ -8,8 +8,10 @@ function* loadTestData(action: PayloadAction<string>) {
     const response = yield axios({
       url: 'https://jsonplaceholder.typicode.com/posts',
     });
+    // eslint-disable-next-line
     console.log(response, action.payload);
   } catch (e) {
+    // eslint-disable-next-line
     console.error(e);
   }
 }
