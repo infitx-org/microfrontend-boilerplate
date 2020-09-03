@@ -38,6 +38,10 @@ module.exports = {
     publicPath: 'http://localhost:3002/', // Where it's going to be expected to be published for being externally loaded
   },
   resolve: {
+    alias: {
+      react: path.resolve(__dirname, 'node_modules', 'react'),
+      'react-redux': path.resolve(__dirname, 'node_modules', 'react-redux'),
+    },
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.css'],
   },
@@ -47,12 +51,12 @@ module.exports = {
         enforce: 'pre',
         test: /\.(ts|js)x?$/,
         use: 'eslint-loader',
-        exclude: /node_modules/,
+        exclude: [/node_modules/, /modusbox\-ui\-components/],
       },
       {
         test: /\.(ts|js)x?$/,
         use: 'ts-loader',
-        exclude: [/node_modules/],
+        exclude: [/node_modules/, /modusbox\-ui\-components/],
       },
       {
         test: /\.css$/i,
