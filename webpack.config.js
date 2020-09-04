@@ -2,7 +2,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { ModuleFederationPlugin } = require('webpack').container;
 const path = require('path');
 const deps = require('./package.json').dependencies;
-console.log(deps);
 
 module.exports = {
   entry: './src/index',
