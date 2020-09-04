@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { useReducerLoader } from '@modusbox/modusbox-ui-components/dist/redux/hooks';
+import { useReducerLoader } from 'store/hooks';
 import { App } from './App';
 import reducer from './App/reducer';
 import sagas from './App/sagas';
