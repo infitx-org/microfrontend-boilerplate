@@ -17,7 +17,7 @@ const App: FC<AppProps> = ({ token = '' }) => {
   return (
     <>
       <Welcome basePath={basePath} />
-      <Tabbb onTabClick={history.push} basePath={basePath} pathname={pathname} />
+      <Navigator onTabClick={history.push} basePath={basePath} pathname={pathname} />
       <Editor basePath={basePath} token={token} />
     </>
   );
@@ -44,7 +44,7 @@ interface TabProps {
   pathname: string;
 }
 
-const Tabbb: FC<TabProps> = ({ pathname, basePath, onTabClick }) => {
+const Navigator: FC<TabProps> = ({ pathname, basePath, onTabClick }) => {
   const views = ['form', 'resume', 'data'];
   const viewIndex = views.indexOf(pathname.replace(basePath, '').substring(1));
   const selected = viewIndex !== -1 ? viewIndex : undefined;
