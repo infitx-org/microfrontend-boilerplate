@@ -4,15 +4,18 @@ import { App } from './App';
 import reducer from './App/reducer';
 import sagas from './App/sagas';
 
-// TODO: investigating better way of injecting reducer at runtime
-const AppWithStoreInjector: FC<unknown> = () => {
+interface AppWithStoreInjectorProps {
+  token?: string;
+}
+
+const AppWithStoreInjector: FC<AppWithStoreInjectorProps> = ({ token }) => {
   let isReducerLoaded = false;
   try {
     isReducerLoaded = useReducerLoader('subApp', reducer, sagas);
   } catch (e) {
     console.log(e);
   }
-  return isReducerLoaded ? <App /> : <div>error while loading reducer / sagas</div>;
+  return isReducerLoaded ? <App token={token} /> : <div>error while loading reducer / sagas</div>;
 };
 
 export default AppWithStoreInjector;
