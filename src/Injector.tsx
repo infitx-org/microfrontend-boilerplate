@@ -1,8 +1,7 @@
 import React, { FC } from 'react';
 import { Provider } from 'react-redux';
-import { Store, combineReducers } from 'redux';
+import { combineReducers } from 'redux';
 import { useReducerLoader } from '@modusbox/modusbox-ui-components/dist/redux/hooks';
-import { InjectableStore } from '@modusbox/modusbox-ui-components/dist/redux/injectors';
 import { App } from './App';
 import { reducers } from './App/reducer';
 import sagas from './App/sagas';
