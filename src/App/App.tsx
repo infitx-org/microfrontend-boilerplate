@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
-import { Title, Tabs, Tab } from 'components';
+import { Heading, Tabs, Tab, Text } from 'components';
 import Editor from './Editor';
 import { useBasePath } from './hooks';
 import './index.scss';
@@ -12,12 +12,11 @@ interface WelcomeProps {
 function Welcome({ basePath }: WelcomeProps) {
   return (
     <div style={{ padding: '10px' }}>
-      <Title>
-        <strong>Welcome!</strong>
-        <br />
+      <Heading size="4">Welcome!</Heading>
+      <Text>
         App is mounted on <code>{basePath || '/'}</code> and will automatically redirect to{' '}
         <code>{basePath}/form</code>
-      </Title>
+      </Text>
     </div>
   );
 }

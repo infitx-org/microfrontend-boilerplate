@@ -19,7 +19,13 @@ function NameForm({ token = '' }: FormProps) {
 
   return (
     <Row align="center left">
-      <Icon size={30} icon={<WarnIcon />} fill="#999" />
+      <div style={{ margin: '5px' }}>
+        <Icon
+          size={20}
+          icon={<WarnIcon />}
+          fill={getComputedStyle(document.documentElement).getPropertyValue('--color__primary')}
+        />
+      </div>
       <TextField
         className="form__field"
         size="small"
