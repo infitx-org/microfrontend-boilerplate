@@ -1,33 +1,33 @@
 import React from 'react';
-import { Field, Text } from 'components';
-import './Resume.scss';
+import { Column, Field, Text } from 'components';
 import editorConnector, { EditorProps } from '../connectors';
+import './Resume.scss';
 
 function Resume({ name, lastname, address }: EditorProps) {
   return (
-    <div>
-      <Field className="resume__field" size="small" kind="dark">
+    <Column className="resume__column">
+      <Field className="resume__field" kind="dark">
         {name || (
-          <Text light size="small">
+          <Text light size="medium">
             name unset
           </Text>
         )}
       </Field>
-      <Field className="resume__field" size="small" kind="dark">
+      <Field className="resume__field" kind="dark">
         {lastname || (
-          <Text light size="small">
+          <Text light size="medium">
             lastname unset
           </Text>
         )}
       </Field>
-      <Field className="resume__field" size="small" kind="dark">
+      <Field className="resume__field" kind="dark">
         {address || (
-          <Text light size="small">
+          <Text light size="medium">
             address unset
           </Text>
         )}
       </Field>
-    </div>
+    </Column>
   );
 }
 

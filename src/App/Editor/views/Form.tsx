@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Icon, Row, TextField } from 'components';
+import { Button, Column, Icon, TextField } from 'components';
 // @ts-ignore
 import WarnIcon from 'bootstrap-icons/icons/exclamation-diamond-fill.svg';
 import './Form.scss';
@@ -16,50 +16,49 @@ function Form({
   onSubmitEditorForm,
   onSimulateUnauthenticatedRequest,
 }: EditorProps) {
+  const warnIcon = (
+    <Icon
+      size={20}
+      icon={<WarnIcon />}
+      fill={getComputedStyle(document.documentElement).getPropertyValue('--color__primary')}
+    />
+  );
+
   return (
-    <Row align="center left">
-      <div style={{ margin: '5px' }}>
-        <Icon
-          size={20}
-          icon={<WarnIcon />}
-          fill={getComputedStyle(document.documentElement).getPropertyValue('--color__primary')}
-        />
-      </div>
+    <Column align="center left" className="form__column">
       <TextField
         className="form__field"
-        size="small"
         value={name}
         placeholder="Name"
         onChange={onChangeEditorName}
       />
       <TextField
         className="form__field"
-        size="small"
         value={lastname}
         placeholder="Lastname"
         onChange={onChangeEditorLastname}
       />
       <TextField
         className="form__field"
-        size="small"
         value={address}
         placeholder="Address"
         onChange={onChangeEditorAddress}
       />
       <Button
         label="Submit Form"
-        size="small"
+        className="form__field"
         onClick={onSubmitEditorForm}
         disabled={formSubmit.pending}
         pending={formSubmit.pending}
       />
       <Button
         label="Simluate unauthenticated request"
-        size="small"
+        className="form__field"
         kind="danger"
         onClick={onSimulateUnauthenticatedRequest}
+        icon={warnIcon}
       />
-    </Row>
+    </Column>
   );
 }
 
