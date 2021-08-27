@@ -11,7 +11,7 @@ It provides a basic module structure ready to be used, a webpack configuration t
 Microfrontends can be set up to act as hosts(parents), remotes(children) or
 bi-directional apps where the host consumes remotes but can also be consumed by another host.
 
-`microfrontend-boilerplate` is a default remote(child) boiler plate meant to expose
+`microfrontend-boilerplate` is a default remote(child) boilerplate meant to expose
 components to be consumed by a remote such as `microfrontend-shell-boilerplate`.
 
 https://github.com/modusintegration/microfrontend-shell-boilerplate
