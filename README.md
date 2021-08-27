@@ -15,6 +15,7 @@ bi-directional apps where the host consumes remotes but can also be consumed by 
 components to be consumed by a remote such as `microfrontend-shell-boilerplate`.
 
 https://github.com/modusintegration/microfrontend-shell-boilerplate
+
 #### Available scripts
 
  - `yarn prettier` to prettify the codebase
@@ -70,10 +71,10 @@ PUBLIC_PATH=http://localhost:3012/
 
 #### Deployment - In Progress
 
-This boilerplate is currently configured to deploy to Vercel (https://vercel.com/docs)
-using Vercel for Github (https://vercel.com/docs/git/vercel-for-github)
+This boilerplate is currently configured to deploy to [Vercel](https://vercel.com/docs)
+using [Vercel for Github](https://vercel.com/docs/git/vercel-for-github)
 
-`microfrontend-boilerplate` can be made to be used with other SPA hosting services.
+`microfrontend-shell-boilerplate` can be made to be used with other SPA hosting services.
 Just update `webpack.config.js` to pull and set env variables from a hosting service
 into `DEV_PORT` and `PUBLIC_PATH`.
 
