@@ -4,7 +4,7 @@ This is the boilerplate project to create microfrontends.
 
 It is based on React / Redux and it is built in Typescript and developed with Webpack, Babel, Eslint, Prettier.
 
-Includes React Router, Redux Saga, and the @Modusbox UI components.
+Includes React Router, Redux Saga, and @modusbox/react-components.
 
 It provides a basic module structure ready to be used, a webpack configuration that exports the microfrontend so that it can be lazy loaded.
 
@@ -14,7 +14,7 @@ bi-directional apps where the host consumes remotes but can also be consumed by 
 `microfrontend-boilerplate` is a default remote(child) boilerplate meant to expose
 components to be consumed by a remote such as `microfrontend-shell-boilerplate`.
 
-https://github.com/modusintegration/microfrontend-shell-boilerplate
+[microfrontend-shell-boilerplate](https://github.com/modusintegration/microfrontend-shell-boilerplate)
 
 #### Available scripts
 
