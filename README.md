@@ -21,7 +21,7 @@ bi-directional apps where the host consumes remotes but can also be consumed by 
 
 `microfrontend-boilerplate` is a default remote(child) boilerplate meant to expose
 components to be consumed by a remote such as
-[microfrontend-shell-boilerplate](https://github.com/modusintegration/microfrontend-shell-boilerplate).
+[microfrontend-boilerplate](https://github.com/modusintegration/microfrontend-boilerplate).
 
 While microfrontends setups can be an assortment of many hosts, remotes or
 bidirectional apps consuming or being consumed by another.
@@ -91,7 +91,7 @@ using [Vercel for Github](https://vercel.com/docs/git/vercel-for-github)
 What is Vercel? Vercel is a cloud platform to deploy frontend applications
 onto Vercel's Global Edge Network(CDN).
 
-`microfrontend-shell-boilerplate` can be made to be used with other SPA hosting services.
+`microfrontend-boilerplate` can be made to be used with other SPA hosting services.
 Just update `webpack.config.js` to pull and set env variables from a hosting service
 into `DEV_PORT` and `PUBLIC_PATH`.
 

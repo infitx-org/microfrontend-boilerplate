@@ -52,3 +52,14 @@ export default function ExportApp({ authConfig, pubSub }: ExportAppProps) {
     </Provider>
   );
 }
+
+if (process.env.NODE_ENV !== 'development') {
+  // eslint-disable-next-line
+  console.info('Name', process.env.REACT_APP_NAME);
+
+  // eslint-disable-next-line
+  console.info('Version', process.env.REACT_APP_VERSION);
+
+  // eslint-disable-next-line
+  console.info('Commit', process.env.REACT_APP_COMMIT);
+}
