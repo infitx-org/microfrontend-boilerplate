@@ -18,6 +18,8 @@ interface ExportAppProps {
   pubSub: PubSub;
 }
 
+// the store is initialized outside the function component
+// so that it is persisted between mounts
 const store = configureStore(null, {
   isDevelopment: process.env.NODE_ENV === 'development',
 });
@@ -28,13 +30,13 @@ export default function ExportApp({ authConfig, pubSub }: ExportAppProps) {
   }
 
   const unsubChannelA0 = pubSub.subscribe('channel-A', () => {
-    store.dispatch(actions.increaseCounter());
+    // store.dispatch(actions.increaseCounter());
   });
   const unsubChannelA1 = pubSub.subscribe('channel-A', () => {
-    store.dispatch(actions.increaseCounter());
+    // store.dispatch(actions.increaseCounter());
   });
   const unsubChannelB0 = pubSub.subscribe('channel-B', () => {
-    store.dispatch(actions.increaseCounter());
+    // store.dispatch(actions.increaseCounter());
   });
 
   setTimeout(() => {

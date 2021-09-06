@@ -16,7 +16,7 @@ The application is driven by some environment variables used at build and runtim
 
 | Name | Description | Default | Used Locally | Used In A Deployment
 |---|---|---|---|---|
-| `REACT_APP_API_BASE_URL` | base path for api (could be a URL) | /api | V | ? |
+| `REACT_APP_API_BASE_URL` | base url / path for api | /api | V | ? |
 | `REACT_APP_MOCK_API` |  enables mock api locally | true | V | ? |
 | `DEV_PORT` | webpack server dev http port | 3001 | V |   |
 
