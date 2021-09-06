@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import configureStore, { ReduxContext } from './store';
+import { store, ReduxContext } from './store';
 import App from './App';
 import { actions, AuthConfig } from './App/Config';
 
@@ -17,12 +17,6 @@ interface ExportAppProps {
   authConfig?: AuthConfig;
   pubSub: PubSub;
 }
-
-// the store is initialized outside the function component
-// so that it is persisted between mounts
-const store = configureStore(null, {
-  isDevelopment: process.env.NODE_ENV === 'development',
-});
 
 export default function ExportApp({ authConfig, pubSub }: ExportAppProps) {
   if (authConfig) {

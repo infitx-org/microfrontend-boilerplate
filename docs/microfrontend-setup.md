@@ -111,7 +111,7 @@ To simplify the configuration, this is set using the `PUBLIC_PATH` environemnt v
 
 #### Module Federation Plugin
 
-At the plugins section, you can find the _ModuleFederationPlugin_.
+At the `webpack.config.js` plugins section, you can find the _ModuleFederationPlugin_.
 
 The configuration is similar to the following:
 
@@ -136,7 +136,13 @@ plugins: [
       ...
 ```
 
-**Note**
+In the `expose` configuration, you need to export all the components you expect are going to be use.
+
+**Note - export only the modules** 
+
+Make sure you do not export the `bootstrap.tsx` as that is only used locally. When your modules are imported by a host, they do not need to include all the traditional context setup specified in `bootstrap.tsx` since the host will be providing that.
+
+**Note - set a unique name**
 
 Make sure you set the unique name in the following fields:
 
