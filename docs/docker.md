@@ -51,7 +51,7 @@ The `config.json` is produced at runtime, it uses environment variables passed t
 
 ```bash
 docker run --rm \
-  -p 8081:8081 \
+  -p 8081:8080 \
   -e API_BASE_URL="https://your-api-base-url" \
   -e MOCK_API="true" \
    microfrontend-boilerplate
