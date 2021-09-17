@@ -1,9 +1,9 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { PubSub } from '@modusbox/microfrontend-utils';
+import { PubSub, AuthConfig } from '@modusbox/microfrontend-utils';
 import { store, ReduxContext } from './store';
 import App from './App';
-import { actions, AuthConfig } from './App/Config';
+import { actions } from './App/Config';
 
 interface ExportAppProps {
   authConfig?: AuthConfig;
